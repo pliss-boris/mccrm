@@ -2,7 +2,7 @@
     "mccrmApp": {
         "customerContact" : {
             "home": {
-                "title": "Customer Contacts",
+                "title": "Контакт клиента",
                 "createLabel": "Создать новый Customer Contact",
                 "createOrEditLabel": "Создать или отредактировать Customer Contact",
                 "search": "Найти Customer Contact"
@@ -16,15 +16,18 @@
             "detail": {
                 "title": "Customer Contact"
             },
-            "greeting": "Greeting",
-            "firstName": "First Name",
-            "lastName": "Last Name",
-            "mobile": "Mobile",
-            "fax": "Fax",
-            "email": "Email",
+            "greeting": "Обращение",
+            "firstName": "Имя",
+            "lastName": "Фамилия",
+            "mobile": "Мобильный телефон",
+            "fax": "Факс",
+            "email": "Электронная почта",
             "memo": "Memo",
-            "contactType": "Contact Type",
-            "customer": "Customer"
+            "contactType": "Тип клиента",
+            "customer": "Customer",
+            "ContactType": {
+                "REGULAR": "Обычный"
+            }
         }
     }
 }

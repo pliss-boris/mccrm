@@ -1,8 +1,8 @@
 {
     "mccrmApp": {
         "customerAddres" : {
-            "home": {
-                "title": "Customer Addres",
+            "Home": {
+                "title": "Адресс Клиента",
                 "createLabel": "Создать новый Customer Addres",
                 "createOrEditLabel": "Создать или отредактировать Customer Addres",
                 "search": "Найти Customer Addres"
@@ -14,17 +14,17 @@
                 "question": "Вы уверены что хотите удалить Customer Addres {{ id }}?"
             },
             "detail": {
-                "title": "Customer Addres"
+                "title": "Аддрес клиента"
             },
-            "adressType": "Adress Type",
-            "country": "Country",
-            "city": "City",
-            "home": "Home",
-            "homeLetter": "Home Letter",
-            "flat": "Flat",
-            "zip": "Zip",
+            "adressType": "Тип адресса",
+            "country": "Страна",
+            "city": "Город",
+            "home": "Строение",
+            "homeLetter": "Буква стоения",
+            "flat": "Квартира",
+            "zip": "Индекс",
             "isActive": "Is Active",
-            "customer": "Customer"
+            "customer": "Слиент"
         }
     }
 }
