@@ -1,0 +1,59 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "customer",
+      "otherEntityName": "customer",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "greeting",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "firstName",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "lastName",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "mobile",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "fax",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 6,
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 7,
+      "fieldName": "memo",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 8,
+      "fieldName": "contactType",
+      "fieldType": "ContactType",
+      "fieldValues": "REGULAR,CONTACT"
+    }
+  ],
+  "changelogDate": "20160716103520",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "customer_contact"
+}

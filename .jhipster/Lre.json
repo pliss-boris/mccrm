@@ -1,0 +1,26 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipType": "one-to-many",
+      "relationshipName": "customer",
+      "otherEntityName": "customer",
+      "otherEntityRelationshipName": "lre"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "description",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    }
+  ],
+  "changelogDate": "20160716103517",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "lre"
+}

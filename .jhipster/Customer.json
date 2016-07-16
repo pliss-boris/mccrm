@@ -1,0 +1,84 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "lre",
+      "otherEntityName": "lre",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipType": "one-to-many",
+      "relationshipName": "customerAddres",
+      "otherEntityName": "customerAddres",
+      "otherEntityRelationshipName": "customer"
+    },
+    {
+      "relationshipId": 3,
+      "relationshipType": "one-to-many",
+      "relationshipName": "customerContact",
+      "otherEntityName": "customerContact",
+      "otherEntityRelationshipName": "customer"
+    },
+    {
+      "relationshipId": 4,
+      "relationshipType": "one-to-many",
+      "relationshipName": "customer",
+      "otherEntityName": "customer",
+      "otherEntityRelationshipName": "parentCustomer"
+    },
+    {
+      "relationshipId": 5,
+      "relationshipType": "many-to-one",
+      "relationshipName": "parentCustomer",
+      "otherEntityName": "customer",
+      "otherEntityField": "parentCustomerId"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "firstName",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": 64
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "lastName",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": 64
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "middleName",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": 64
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "customerType",
+      "fieldType": "CustomerType",
+      "fieldValues": "REGULAR,CORPORATE"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "creationDate",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "changelogDate": "20160716103518",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "customer"
+}

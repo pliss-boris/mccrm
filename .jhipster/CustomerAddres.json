@@ -1,0 +1,87 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "customer",
+      "otherEntityName": "customer",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "adressType",
+      "fieldType": "AdressType",
+      "fieldValues": "REGULAR,INVOICE",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "country",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required",
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": 64
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "city",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": 64
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "home",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": 64
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "homeLetter",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": 16
+    },
+    {
+      "fieldId": 6,
+      "fieldName": "flat",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": 64
+    },
+    {
+      "fieldId": 7,
+      "fieldName": "zip",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": 64
+    },
+    {
+      "fieldId": 8,
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    }
+  ],
+  "changelogDate": "20160716103519",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "customer_addres"
+}
