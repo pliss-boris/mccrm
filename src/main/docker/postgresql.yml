@@ -1,0 +1,12 @@
+version: '2'
+services:
+    mccrm-postgresql:
+        container_name: mccrm-postgresql
+        image: postgres:9.5.2
+        # volumes:
+        #     - ~/volumes/jhipster/mccrm/postgresql/:/var/lib/postgresql/
+        environment:
+            - POSTGRES_USER=mccrm
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432

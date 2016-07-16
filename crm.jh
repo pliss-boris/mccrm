@@ -1,0 +1,57 @@
+
+enum CustomerType {
+	REGULAR, CORPORATE
+}
+
+enum AdressType {
+	REGULAR, INVOICE
+}
+
+enum ContactType {
+	REGULAR, CONTACT
+}
+
+entity Lre {
+	description String required
+}
+
+entity Customer {
+	firstName String maxlength(64),
+    lastName String  maxlength(64),
+    middleName String  maxlength(64),
+    customerType CustomerType,
+    creationDate LocalDate
+}
+
+entity CustomerAddres {
+	adressType AdressType required,
+    country String required  maxlength(64),
+    city String  maxlength(64),
+    home String  maxlength(64),
+    homeLetter String  maxlength(16),
+    flat String maxlength(64),
+    zip String maxlength(64),
+    isActive Boolean
+}
+
+entity CustomerContact {
+	greeting String,
+    firstName String,
+    lastName String,
+    mobile String,
+    fax String,
+    email String,
+    memo String,
+    contactType ContactType
+}
+
+relationship OneToMany {
+	Lre to Customer
+}
+relationship OneToMany {
+	Customer to CustomerAddres
+}
+
+relationship OneToMany {
+	Customer to CustomerContact
+}
