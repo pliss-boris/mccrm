@@ -3,6 +3,7 @@ package com.bd.mc.crm.repository;
 import com.bd.mc.crm.domain.Customer;
 
 import org.springframework.data.jpa.repository.*;
+import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
@@ -11,5 +12,8 @@ import java.util.List;
  */
 @SuppressWarnings("unused")
 public interface CustomerRepository extends JpaRepository<Customer,Long> {
+
+    @Query("select o from Customer o where o.id <> :id")
+    List<Customer> findCustomersExcludeCurrent(@Param("id") Long id);
 
 }

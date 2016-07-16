@@ -10,6 +10,11 @@
         var resourceUrl =  'api/customers/:id';
 
         return $resource(resourceUrl, {}, {
+            'queryWithoutCurrent': {
+                method: 'GET',
+                isArray: true,
+                url: 'api/customers/exclude/:id',
+            },
             'query': { method: 'GET', isArray: true},
             'get': {
                 method: 'GET',

@@ -17,48 +17,48 @@
         Added the entity CustomerContact.
     -->
     <changeSet id="20160716103520-1" author="jhipster">
-        <createTable tableName="customer_contact">
+        <createTable tableName="customer_contact" schemaName="crm">
             <column name="id" type="bigint" autoIncrement="${autoIncrement}">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
             <column name="greeting" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="first_name" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="last_name" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="mobile" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="fax" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="email" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="memo" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="contact_type" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="customer_id" type="bigint">
                 <constraints nullable="true" />
             </column>
 
             <!-- jhipster-needle-liquibase-add-column - Jhipster will add columns here, do not remove-->
         </createTable>
-        
+
     </changeSet>
 </databaseChangeLog>

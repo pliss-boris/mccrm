@@ -7,17 +7,21 @@
         Added the constraints for entity Customer.
     -->
     <changeSet id="20160716103518-2" author="jhipster">
-        
+
         <addForeignKeyConstraint baseColumnNames="lre_id"
                                  baseTableName="customer"
+                                 baseTableSchemaName="crm"
                                  constraintName="fk_customer_lre_id"
                                  referencedColumnNames="id"
+                                 referencedTableSchemaName="crm"
                                  referencedTableName="lre"/>
 
         <addForeignKeyConstraint baseColumnNames="parent_customer_id"
                                  baseTableName="customer"
+                                 baseTableSchemaName="crm"
                                  constraintName="fk_customer_parentcustomer_id"
                                  referencedColumnNames="id"
+                                 referencedTableSchemaName="crm"
                                  referencedTableName="customer"/>
 
     </changeSet>

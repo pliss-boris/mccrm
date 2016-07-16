@@ -49,7 +49,10 @@
             resolve: {
                 translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
                     $translatePartialLoader.addPart('customer');
+                    $translatePartialLoader.addPart('customerAddres');
+                    $translatePartialLoader.addPart('customerContact');
                     $translatePartialLoader.addPart('customerType');
+                    $translatePartialLoader.addPart('contactType');
                     return $translate.refresh();
                 }],
                 entity: ['$stateParams', 'Customer', function($stateParams, Customer) {

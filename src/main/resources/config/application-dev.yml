@@ -18,10 +18,10 @@ spring:
         livereload:
             enabled: false # we use gulp + BrowserSync for livereload
     datasource:
-        url: jdbc:postgresql://localhost:5432/mccrm
+        url: jdbc:postgresql://localhost:5432/jht0
         name:
-        username: mccrm
-        password:
+        username: mcadmin
+        password: mcadmin
     jpa:
         database-platform: com.bd.mc.crm.domain.util.FixedPostgreSQL82Dialect
         database: POSTGRESQL

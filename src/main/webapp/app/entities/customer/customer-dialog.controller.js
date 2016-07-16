@@ -18,7 +18,8 @@
         vm.lres = Lre.query();
         vm.customeraddres = CustomerAddres.query();
         vm.customercontacts = CustomerContact.query();
-        vm.customers = Customer.query();
+        // vm.customers = Customer.query();
+        vm.customers = Customer.queryWithoutCurrent({id: vm.customer.id});
 
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();

@@ -11,13 +11,13 @@ import com.bd.mc.crm.domain.enumeration.ContactType;
  * A CustomerContact.
  */
 @Entity
-@Table(name = "customer_contact")
+@Table(name = "customer_contact", schema = "crm")
 public class CustomerContact implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "greeting")

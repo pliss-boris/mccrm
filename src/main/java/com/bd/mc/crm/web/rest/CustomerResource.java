@@ -27,10 +27,10 @@ import java.util.Optional;
 public class CustomerResource {
 
     private final Logger log = LoggerFactory.getLogger(CustomerResource.class);
-        
+
     @Inject
     private CustomerRepository customerRepository;
-    
+
     /**
      * POST  /customers : Create a new customer.
      *
@@ -126,6 +126,11 @@ public class CustomerResource {
         log.debug("REST request to delete Customer : {}", id);
         customerRepository.delete(id);
         return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert("customer", id.toString())).build();
+    }
+
+    @RequestMapping(value = "/customers/exclude/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<Customer> findCustomersExclude(@PathVariable Long id){
+        return customerRepository.findCustomersExcludeCurrent(id);
     }
 
 }

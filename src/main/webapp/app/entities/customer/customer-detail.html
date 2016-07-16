@@ -26,12 +26,69 @@
         </dd>
         <dt><span translate="mccrmApp.customer.lre">Lre</span></dt>
         <dd>
-            <a ui-sref="lre-detail({id:vm.customer.lre.id})">{{vm.customer.lre.id}}</a>
+            <a ui-sref="lre-detail({id:vm.customer.lre.id})">{{vm.customer.lre.description}}</a>
         </dd>
         <dt><span translate="mccrmApp.customer.parentCustomer">Parent Customer</span></dt>
         <dd>
-            <a ui-sref="customer-detail({id:vm.customer.parentCustomer.id})">{{vm.customer.parentCustomer.parentCustomerId}}</a>
+            <a ui-sref="customer-detail({id:vm.customer.parentCustomer.id})">{{vm.customer.parentCustomer.id}}</a>
         </dd>
+        <table class="table table-bordered">
+            <caption><span translate="mccrmApp.customerAddres.Home.title"></span></caption>
+            <thead>
+                <tr>
+                    <th><span translate="mccrmApp.customerAddres.city"></span></th>
+                    <th><span translate="mccrmApp.customerAddres.country"></span></th>
+                    <th><span translate="mccrmApp.customerAddres.home"></span></th>
+                    <th><span translate="mccrmApp.customerAddres.flat"></span></th>
+                    <th><span translate="mccrmApp.customerAddres.zip"></span></th>
+                </tr>
+            </thead>
+            <tr ng-repeat="c in vm.customerAdresses">
+                <td>{{c.city}}</td>
+                <td>{{c.country}}</td>
+                <td>{{c.home}}</td>
+                <td>{{c.flat}}</td>
+                <td>{{c.zip}}</td>
+            </tr>
+        </table>
+<!--
+            "greeting": "Greeting",
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "mobile": "Mobile",
+            "fax": "Fax",
+            "email": "Email",
+            "memo": "Memo",
+            "contactType": "Contact Type",
+-->
+
+        <table class="table table-bordered">
+            <caption><span translate="mccrmApp.customerContact.home.title"></span></caption>
+            <thead>
+                <tr>
+                    <th><span translate="mccrmApp.customerContact.greeting"></span></th>
+                    <th><span translate="mccrmApp.customerContact.firstName"></span></th>
+                    <th><span translate="mccrmApp.customerContact.lastName"></span></th>
+                    <th><span translate="mccrmApp.customerContact.mobile"></span></th>
+                    <th><span translate="mccrmApp.customerContact.fax"></span></th>
+                    <th><span translate="mccrmApp.customerContact.email"></span></th>
+                    <th><span translate="mccrmApp.customerContact.memo"></span></th>
+                    <th><span translate="mccrmApp.customerContact.contactType"></span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="c in vm.customerContact">
+                    <td>{{c.greeting}}</td>
+                    <td>{{c.firstName}}</td>
+                    <td>{{c.lastName}}</td>
+                    <td>{{c.mobile}}</td>
+                    <td>{{c.fax}}</td>
+                    <td>{{c.email}}</td>
+                    <td>{{c.memo}}</td>
+                    <td><span translate="{{'mccrmApp.ContactType.' + c.contactType}}"></span></td>
+                </tr>
+            </tbody>
+        </table>
     </dl>
 
     <button type="submit"

@@ -41,7 +41,7 @@
                         <a ui-sref="lre-detail({id:customer.lre.id})">{{customer.lre.id}}</a>
                     </td>
                     <td>
-                        <a ui-sref="customer-detail({id:customer.parentCustomer.id})">{{customer.parentCustomer.parentCustomerId}}</a>
+                        <a ui-sref="customer-detail({id:customer.parentCustomer.id})">{{customer.parentCustomer.firstName + ' ' + customer.parentCustomer.lastName}}</a>
                     </td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">

@@ -16,13 +16,13 @@ import com.bd.mc.crm.domain.enumeration.CustomerType;
  * A Customer.
  */
 @Entity
-@Table(name = "customer")
+@Table(name = "customer", schema = "crm")
 public class Customer implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Size(max = 64)

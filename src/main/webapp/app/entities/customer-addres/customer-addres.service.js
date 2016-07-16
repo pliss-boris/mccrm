@@ -10,6 +10,11 @@
         var resourceUrl =  'api/customer-addres/:id';
 
         return $resource(resourceUrl, {}, {
+            'queryByCustomerId': {
+                method: 'GET',
+                isArray: true,
+                url: 'api/customer-addres/customer/:id'
+            },
             'query': { method: 'GET', isArray: true},
             'get': {
                 method: 'GET',

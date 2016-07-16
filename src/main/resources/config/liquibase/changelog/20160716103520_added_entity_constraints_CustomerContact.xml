@@ -7,11 +7,13 @@
         Added the constraints for entity CustomerContact.
     -->
     <changeSet id="20160716103520-2" author="jhipster">
-        
+
         <addForeignKeyConstraint baseColumnNames="customer_id"
                                  baseTableName="customer_contact"
+                                 baseTableSchemaName="crm"
                                  constraintName="fk_customercontact_customer_id"
                                  referencedColumnNames="id"
+                                 referencedTableSchemaName="crm"
                                  referencedTableName="customer"/>
 
     </changeSet>

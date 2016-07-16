@@ -12,13 +12,13 @@ import com.bd.mc.crm.domain.enumeration.AdressType;
  * A CustomerAddres.
  */
 @Entity
-@Table(name = "customer_addres")
+@Table(name = "customer_addres", schema = "crm")
 public class CustomerAddres implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotNull

@@ -1,7 +1,7 @@
 {
     "mccrmApp": {
         "customerAddres" : {
-            "home": {
+            "Home": {
                 "title": "Customer Addres",
                 "createLabel": "Create a new Customer Addres",
                 "createOrEditLabel": "Create or edit a Customer Addres",
