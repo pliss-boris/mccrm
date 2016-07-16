@@ -1,5 +1,6 @@
 package com.bd.mc.crm.domain;
 
+import com.bd.mc.crm.domain.config.SchemasConfig;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
@@ -13,7 +14,7 @@ import java.util.Objects;
  * A Lre.
  */
 @Entity
-@Table(name = "lre", schema = "crm")
+@Table(name = "lre", schema = SchemasConfig.CRM)
 public class Lre implements Serializable {
 
     private static final long serialVersionUID = 1L;

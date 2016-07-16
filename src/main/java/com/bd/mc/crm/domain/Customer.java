@@ -1,5 +1,6 @@
 package com.bd.mc.crm.domain;
 
+import com.bd.mc.crm.domain.config.SchemasConfig;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
@@ -16,7 +17,7 @@ import com.bd.mc.crm.domain.enumeration.CustomerType;
  * A Customer.
  */
 @Entity
-@Table(name = "customer", schema = "crm")
+@Table(name = "customer", schema = SchemasConfig.CRM)
 public class Customer implements Serializable {
 
     private static final long serialVersionUID = 1L;

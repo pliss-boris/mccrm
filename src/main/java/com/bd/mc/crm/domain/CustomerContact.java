@@ -5,13 +5,14 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
+import com.bd.mc.crm.domain.config.SchemasConfig;
 import com.bd.mc.crm.domain.enumeration.ContactType;
 
 /**
  * A CustomerContact.
  */
 @Entity
-@Table(name = "customer_contact", schema = "crm")
+@Table(name = "customer_contact", schema = SchemasConfig.CRM)
 public class CustomerContact implements Serializable {
 
     private static final long serialVersionUID = 1L;

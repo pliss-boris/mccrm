@@ -10,10 +10,10 @@
 
         <addForeignKeyConstraint baseColumnNames="customer_id"
                                  baseTableName="customer_contact"
-                                 baseTableSchemaName="crm"
+                                 baseTableSchemaName="${CRM_SCHEMA}"
                                  constraintName="fk_customercontact_customer_id"
                                  referencedColumnNames="id"
-                                 referencedTableSchemaName="crm"
+                                 referencedTableSchemaName="${CRM_SCHEMA}"
                                  referencedTableName="customer"/>
 
     </changeSet>

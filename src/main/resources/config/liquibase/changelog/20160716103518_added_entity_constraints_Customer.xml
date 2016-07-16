@@ -10,18 +10,18 @@
 
         <addForeignKeyConstraint baseColumnNames="lre_id"
                                  baseTableName="customer"
-                                 baseTableSchemaName="crm"
+                                 baseTableSchemaName="${CRM_SCHEMA}"
                                  constraintName="fk_customer_lre_id"
                                  referencedColumnNames="id"
-                                 referencedTableSchemaName="crm"
+                                 referencedTableSchemaName="${CRM_SCHEMA}"
                                  referencedTableName="lre"/>
 
         <addForeignKeyConstraint baseColumnNames="parent_customer_id"
                                  baseTableName="customer"
-                                 baseTableSchemaName="crm"
+                                 baseTableSchemaName="${CRM_SCHEMA}"
                                  constraintName="fk_customer_parentcustomer_id"
                                  referencedColumnNames="id"
-                                 referencedTableSchemaName="crm"
+                                 referencedTableSchemaName="${CRM_SCHEMA}"
                                  referencedTableName="customer"/>
 
     </changeSet>

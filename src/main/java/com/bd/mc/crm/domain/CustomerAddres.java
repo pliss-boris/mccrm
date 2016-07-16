@@ -6,13 +6,14 @@ import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.util.Objects;
 
+import com.bd.mc.crm.domain.config.SchemasConfig;
 import com.bd.mc.crm.domain.enumeration.AdressType;
 
 /**
  * A CustomerAddres.
  */
 @Entity
-@Table(name = "customer_addres", schema = "crm")
+@Table(name = "customer_addres", schema = SchemasConfig.CRM)
 public class CustomerAddres implements Serializable {
 
     private static final long serialVersionUID = 1L;

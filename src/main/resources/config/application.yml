@@ -73,3 +73,7 @@ jhipster:
     ribbon:
         # comma seperated list of profiles to show a ribbon on the GUI
         displayOnActiveProfiles: dev
+
+database:
+    schemas:
+        crm: crm

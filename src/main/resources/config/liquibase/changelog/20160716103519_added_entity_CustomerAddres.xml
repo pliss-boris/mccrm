@@ -17,7 +17,7 @@
         Added the entity CustomerAddres.
     -->
     <changeSet id="20160716103519-1" author="jhipster">
-        <createTable tableName="customer_addres" schemaName="crm">
+        <createTable tableName="customer_addres" schemaName="${CRM_SCHEMA}">
             <column name="id" type="bigint" autoIncrement="${autoIncrement}">
                 <constraints primaryKey="true" nullable="false"/>
             </column>

@@ -17,7 +17,7 @@
         Added the entity Lre.
     -->
     <changeSet id="20160716103517-1" author="jhipster">
-        <createTable tableName="lre" schemaName="crm">
+        <createTable tableName="lre" schemaName="${CRM_SCHEMA}">
             <column name="id" type="bigint" autoIncrement="${autoIncrement}">
                 <constraints primaryKey="true" nullable="false"/>
             </column>

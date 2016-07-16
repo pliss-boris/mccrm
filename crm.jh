@@ -1,30 +1,30 @@
-
 enum CustomerType {
-	REGULAR, CORPORATE
+    REGULAR, CORPORATE
 }
 
 enum AdressType {
-	REGULAR, INVOICE
+    REGULAR, INVOICE
 }
 
 enum ContactType {
-	REGULAR, CONTACT
+    REGULAR, CONTACT
 }
 
 entity Lre {
-	description String required
+    description String required
 }
 
 entity Customer {
-	firstName String maxlength(64),
+    firstName String maxlength(64),
     lastName String  maxlength(64),
     middleName String  maxlength(64),
     customerType CustomerType,
     creationDate LocalDate
 }
 
+
 entity CustomerAddres {
-	adressType AdressType required,
+    adressType AdressType required,
     country String required  maxlength(64),
     city String  maxlength(64),
     home String  maxlength(64),
@@ -35,7 +35,7 @@ entity CustomerAddres {
 }
 
 entity CustomerContact {
-	greeting String,
+    greeting String,
     firstName String,
     lastName String,
     mobile String,
@@ -45,18 +45,80 @@ entity CustomerContact {
     contactType ContactType
 }
 
-relationship OneToMany {
-	Lre to Customer
+entity ClassOfService {
+    description String maxlength(256),
+    created ZonedDateTime
 }
-relationship OneToMany {
-	Customer to CustomerAddres
+
+entity Subscriber {
+    subscriberType String,
+    subscriberPaymentClass Integer,
+    creationDate ZonedDateTime
+}
+
+entity SubscriberWallet {
+    activationDate ZonedDateTime,
+    expired Boolean,
+    created ZonedDateTime
+}
+
+entity SubscriberWalletProperty {
+    balance Double,
+    created ZonedDateTime
+}
+
+entity Communication {
+    title String,
+    contactNumber String,
+    contactPerson String,
+    contactDescripton String,
+    created ZonedDateTime
+}
+
+entity Remark {
+    remark String maxlength(2048)
+    type String
 }
 
 relationship OneToMany {
-	Customer to CustomerContact
+    Lre to Customer
+}
+relationship OneToMany {
+    Customer to CustomerAddres
 }
 
+relationship OneToMany {
+    Customer to CustomerContact
+}
 
 relationship OneToMany {
-	Customer to Customer{parentCustomer(parentCustomerId)}
+    Customer to Communication
+}
+
+relationship OneToMany {
+    Communication to Remark
+}
+
+relationship OneToMany {
+    Lre to ClassOfService
+}
+
+relationship OneToMany {
+    ClassOfService to Subscriber
+}
+
+relationship OneToMany {
+    Customer to Subscriber
+}
+
+relationship OneToMany {
+    Subscriber to SubscriberWallet
+}
+
+relationship OneToMany {
+    SubscriberWallet to SubscriberWalletProperty
+}
+
+relationship ManyToMany {
+    Customer{parentCustomer(parentCustomerId)} to Customer
 }
