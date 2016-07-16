@@ -119,6 +119,6 @@ relationship OneToMany {
     SubscriberWallet to SubscriberWalletProperty
 }
 
-relationship ManyToMany {
+relationship ManyToOne {
     Customer{parentCustomer(parentCustomerId)} to Customer
 }

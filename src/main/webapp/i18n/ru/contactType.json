@@ -2,8 +2,8 @@
     "mccrmApp": {
         "ContactType" : {
             "null": "",
-            "REGULAR": "Обычнй",
-            "CONTACT": "Сорпоративный"
+            "REGULAR": "REGULAR",
+            "CONTACT": "CONTACT"
         }
     }
 }

@@ -1,0 +1,50 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "customer",
+      "otherEntityName": "customer",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipType": "one-to-many",
+      "relationshipName": "remark",
+      "otherEntityName": "remark",
+      "otherEntityRelationshipName": "communication"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "title",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "contactNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "contactPerson",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "contactDescripton",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "created",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "changelogDate": "20160716173202",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "communication"
+}

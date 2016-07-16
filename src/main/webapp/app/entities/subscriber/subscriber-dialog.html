@@ -1,0 +1,60 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="mySubscriberLabel" translate="mccrmApp.subscriber.home.createOrEditLabel">Create or edit a Subscriber</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.subscriber.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.subscriber.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mccrmApp.subscriber.subscriberType" for="field_subscriberType">Subscriber Type</label>
+            <input type="text" class="form-control" name="subscriberType" id="field_subscriberType"
+                    ng-model="vm.subscriber.subscriberType"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mccrmApp.subscriber.subscriberPaymentClass" for="field_subscriberPaymentClass">Subscriber Payment Class</label>
+            <input type="number" class="form-control" name="subscriberPaymentClass" id="field_subscriberPaymentClass"
+                    ng-model="vm.subscriber.subscriberPaymentClass"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mccrmApp.subscriber.creationDate" for="field_creationDate">Creation Date</label>
+                <div class="input-group">
+                    <input id="field_creationDate" type="text" class="form-control" name="creationDate" datetime-picker="{{dateformat}}" ng-model="vm.subscriber.creationDate" is-open="vm.datePickerOpenStatus.creationDate"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('creationDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+
+        <div class="form-group">
+            <label translate="mccrmApp.subscriber.customer" for="field_customer">Customer</label>
+            <select class="form-control" id="field_customer" name="customer" ng-model="vm.subscriber.customer" ng-options="customer as customer.id for customer in vm.customers track by customer.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="mccrmApp.subscriber.classOfService" for="field_classOfService">Class Of Service</label>
+            <select class="form-control" id="field_classOfService" name="classOfService" ng-model="vm.subscriber.classOfService" ng-options="classOfService as classOfService.id for classOfService in vm.classofservices track by classOfService.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

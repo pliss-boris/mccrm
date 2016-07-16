@@ -1,0 +1,25 @@
+{
+    "mccrmApp": {
+        "classOfService" : {
+            "home": {
+                "title": "Class Of Services",
+                "createLabel": "Create a new Class Of Service",
+                "createOrEditLabel": "Create or edit a Class Of Service",
+                "search": "Search for Class Of Service"
+            },
+            "created": "A new Class Of Service is created with identifier {{ param }}",
+            "updated": "A Class Of Service is updated with identifier {{ param }}",
+            "deleted": "A Class Of Service is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Class Of Service {{ id }}?"
+            },
+            "detail": {
+                "title": "Class Of Service"
+            },
+            "description": "Description",
+            "created": "Created",
+            "lre": "Lre",
+            "subscriber": "Subscriber"
+        }
+    }
+}

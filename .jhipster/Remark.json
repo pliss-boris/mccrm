@@ -1,0 +1,32 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "communication",
+      "otherEntityName": "communication",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "remark",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": 2048
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "type",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160716173203",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "remark"
+}

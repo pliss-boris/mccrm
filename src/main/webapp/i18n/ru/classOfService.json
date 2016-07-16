@@ -1,0 +1,25 @@
+{
+    "mccrmApp": {
+        "classOfService" : {
+            "home": {
+                "title": "Class Of Services",
+                "createLabel": "Создать новый Class Of Service",
+                "createOrEditLabel": "Создать или отредактировать Class Of Service",
+                "search": "Найти Class Of Service"
+            },
+            "created": "Новый Class Of Service создан с идентификатором {{ param }}",
+            "updated": "Class Of Service обновлен с идентификатором {{ param }}",
+            "deleted": "Class Of Service удален с идентификатором {{ param }}",
+            "delete": {
+                "question": "Вы уверены что хотите удалить Class Of Service {{ id }}?"
+            },
+            "detail": {
+                "title": "Class Of Service"
+            },
+            "description": "Description",
+            "created": "Created",
+            "lre": "Lre",
+            "subscriber": "Subscriber"
+        }
+    }
+}

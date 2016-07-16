@@ -1,0 +1,24 @@
+{
+    "mccrmApp": {
+        "subscriberWalletProperty" : {
+            "home": {
+                "title": "Subscriber Wallet Properties",
+                "createLabel": "Создать новый Subscriber Wallet Property",
+                "createOrEditLabel": "Создать или отредактировать Subscriber Wallet Property",
+                "search": "Найти Subscriber Wallet Property"
+            },
+            "created": "Новый Subscriber Wallet Property создан с идентификатором {{ param }}",
+            "updated": "Subscriber Wallet Property обновлен с идентификатором {{ param }}",
+            "deleted": "Subscriber Wallet Property удален с идентификатором {{ param }}",
+            "delete": {
+                "question": "Вы уверены что хотите удалить Subscriber Wallet Property {{ id }}?"
+            },
+            "detail": {
+                "title": "Subscriber Wallet Property"
+            },
+            "balance": "Balance",
+            "created": "Created",
+            "subscriberWallet": "Subscriber Wallet"
+        }
+    }
+}

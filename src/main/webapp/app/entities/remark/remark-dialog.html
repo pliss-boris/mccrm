@@ -1,0 +1,50 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myRemarkLabel" translate="mccrmApp.remark.home.createOrEditLabel">Create or edit a Remark</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.remark.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.remark.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mccrmApp.remark.remark" for="field_remark">Remark</label>
+            <input type="text" class="form-control" name="remark" id="field_remark"
+                    ng-model="vm.remark.remark"
+                    ng-maxlength="2048" />
+            <div ng-show="editForm.remark.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.remark.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="2048">
+                    This field cannot be longer than 2048 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mccrmApp.remark.type" for="field_type">Type</label>
+            <input type="text" class="form-control" name="type" id="field_type"
+                    ng-model="vm.remark.type"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="mccrmApp.remark.communication" for="field_communication">Communication</label>
+            <select class="form-control" id="field_communication" name="communication" ng-model="vm.remark.communication" ng-options="communication as communication.id for communication in vm.communications track by communication.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

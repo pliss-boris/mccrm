@@ -1,0 +1,62 @@
+<div>
+    <h2 translate="mccrmApp.classOfService.home.title">Class Of Services</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="class-of-service.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  translate="mccrmApp.classOfService.home.createLabel">
+                        Create new Class Of Service
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="mccrmApp.classOfService.description">Description</span></th>
+                    <th><span translate="mccrmApp.classOfService.created">Created</span></th>
+                    <th><span translate="mccrmApp.classOfService.lre">Lre</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="classOfService in vm.classOfServices track by classOfService.id">
+                    <td><a ui-sref="class-of-service-detail({id:classOfService.id})">{{classOfService.id}}</a></td>
+                    <td>{{classOfService.description}}</td>
+                    <td>{{classOfService.created | date:'medium'}}</td>
+                    <td>
+                        <a ui-sref="lre-detail({id:classOfService.lre.id})">{{classOfService.lre.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="class-of-service-detail({id:classOfService.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="class-of-service.edit({id:classOfService.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="class-of-service.delete({id:classOfService.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

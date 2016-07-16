@@ -5,15 +5,16 @@
         .module('mccrmApp')
         .controller('LreDialogController', LreDialogController);
 
-    LreDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Lre', 'Customer'];
+    LreDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Lre', 'Customer', 'ClassOfService'];
 
-    function LreDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Lre, Customer) {
+    function LreDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Lre, Customer, ClassOfService) {
         var vm = this;
 
         vm.lre = entity;
         vm.clear = clear;
         vm.save = save;
         vm.customers = Customer.query();
+        vm.classofservices = ClassOfService.query();
 
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();

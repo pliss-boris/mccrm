@@ -1,0 +1,40 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "subscriber",
+      "otherEntityName": "subscriber",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipType": "one-to-many",
+      "relationshipName": "subscriberWalletProperty",
+      "otherEntityName": "subscriberWalletProperty",
+      "otherEntityRelationshipName": "subscriberWallet"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "activationDate",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "expired",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "created",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "changelogDate": "20160716173200",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "subscriber_wallet"
+}

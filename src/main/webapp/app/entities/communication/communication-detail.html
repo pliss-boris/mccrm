@@ -1,0 +1,38 @@
+
+<div>
+    <h2><span translate="mccrmApp.communication.detail.title">Communication</span> {{vm.communication.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="mccrmApp.communication.title">Title</span></dt>
+        <dd>
+            <span>{{vm.communication.title}}</span>
+        </dd>
+        <dt><span translate="mccrmApp.communication.contactNumber">Contact Number</span></dt>
+        <dd>
+            <span>{{vm.communication.contactNumber}}</span>
+        </dd>
+        <dt><span translate="mccrmApp.communication.contactPerson">Contact Person</span></dt>
+        <dd>
+            <span>{{vm.communication.contactPerson}}</span>
+        </dd>
+        <dt><span translate="mccrmApp.communication.contactDescripton">Contact Descripton</span></dt>
+        <dd>
+            <span>{{vm.communication.contactDescripton}}</span>
+        </dd>
+        <dt><span translate="mccrmApp.communication.created">Created</span></dt>
+        <dd>
+            <span>{{vm.communication.created | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="mccrmApp.communication.customer">Customer</span></dt>
+        <dd>
+            <a ui-sref="customer-detail({id:vm.communication.customer.id})">{{vm.communication.customer.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

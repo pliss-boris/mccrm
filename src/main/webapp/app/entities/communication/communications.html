@@ -1,0 +1,68 @@
+<div>
+    <h2 translate="mccrmApp.communication.home.title">Communications</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="communication.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  translate="mccrmApp.communication.home.createLabel">
+                        Create new Communication
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="mccrmApp.communication.title">Title</span></th>
+                    <th><span translate="mccrmApp.communication.contactNumber">Contact Number</span></th>
+                    <th><span translate="mccrmApp.communication.contactPerson">Contact Person</span></th>
+                    <th><span translate="mccrmApp.communication.contactDescripton">Contact Descripton</span></th>
+                    <th><span translate="mccrmApp.communication.created">Created</span></th>
+                    <th><span translate="mccrmApp.communication.customer">Customer</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="communication in vm.communications track by communication.id">
+                    <td><a ui-sref="communication-detail({id:communication.id})">{{communication.id}}</a></td>
+                    <td>{{communication.title}}</td>
+                    <td>{{communication.contactNumber}}</td>
+                    <td>{{communication.contactPerson}}</td>
+                    <td>{{communication.contactDescripton}}</td>
+                    <td>{{communication.created | date:'medium'}}</td>
+                    <td>
+                        <a ui-sref="customer-detail({id:communication.customer.id})">{{communication.customer.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="communication-detail({id:communication.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="communication.edit({id:communication.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="communication.delete({id:communication.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

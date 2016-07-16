@@ -9,9 +9,21 @@
     <include file="classpath:config/liquibase/changelog/20160716103518_added_entity_Customer.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20160716103519_added_entity_CustomerAddres.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20160716103520_added_entity_CustomerContact.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160716173258_added_entity_ClassOfService.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160716173259_added_entity_Subscriber.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160716173200_added_entity_SubscriberWallet.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160716173201_added_entity_SubscriberWalletProperty.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160716173202_added_entity_Communication.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160716173203_added_entity_Remark.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="classpath:config/liquibase/changelog/20160716103518_added_entity_constraints_Customer.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20160716103519_added_entity_constraints_CustomerAddres.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20160716103520_added_entity_constraints_CustomerContact.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160716173258_added_entity_constraints_ClassOfService.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160716173259_added_entity_constraints_Subscriber.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160716173200_added_entity_constraints_SubscriberWallet.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160716173201_added_entity_constraints_SubscriberWalletProperty.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160716173202_added_entity_constraints_Communication.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160716173203_added_entity_constraints_Remark.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

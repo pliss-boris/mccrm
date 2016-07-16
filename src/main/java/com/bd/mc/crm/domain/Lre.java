@@ -31,6 +31,10 @@ public class Lre implements Serializable {
     @JsonIgnore
     private Set<Customer> customers = new HashSet<>();
 
+    @OneToMany(mappedBy = "lre")
+    @JsonIgnore
+    private Set<ClassOfService> classOfServices = new HashSet<>();
+
     public Long getId() {
         return id;
     }
@@ -53,6 +57,14 @@ public class Lre implements Serializable {
 
     public void setCustomers(Set<Customer> customers) {
         this.customers = customers;
+    }
+
+    public Set<ClassOfService> getClassOfServices() {
+        return classOfServices;
+    }
+
+    public void setClassOfServices(Set<ClassOfService> classOfServices) {
+        this.classOfServices = classOfServices;
     }
 
     @Override

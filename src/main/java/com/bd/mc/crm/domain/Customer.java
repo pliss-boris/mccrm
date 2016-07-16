@@ -56,9 +56,13 @@ public class Customer implements Serializable {
     @JsonIgnore
     private Set<CustomerContact> customerContacts = new HashSet<>();
 
-    @OneToMany(mappedBy = "parentCustomer")
+    @OneToMany(mappedBy = "customer")
     @JsonIgnore
-    private Set<Customer> customers = new HashSet<>();
+    private Set<Communication> communications = new HashSet<>();
+
+    @OneToMany(mappedBy = "customer")
+    @JsonIgnore
+    private Set<Subscriber> subscribers = new HashSet<>();
 
     @ManyToOne
     private Customer parentCustomer;
@@ -135,12 +139,20 @@ public class Customer implements Serializable {
         this.customerContacts = customerContacts;
     }
 
-    public Set<Customer> getCustomers() {
-        return customers;
+    public Set<Communication> getCommunications() {
+        return communications;
     }
 
-    public void setCustomers(Set<Customer> customers) {
-        this.customers = customers;
+    public void setCommunications(Set<Communication> communications) {
+        this.communications = communications;
+    }
+
+    public Set<Subscriber> getSubscribers() {
+        return subscribers;
+    }
+
+    public void setSubscribers(Set<Subscriber> subscribers) {
+        this.subscribers = subscribers;
     }
 
     public Customer getParentCustomer() {

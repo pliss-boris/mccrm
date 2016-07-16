@@ -1,0 +1,39 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "lre",
+      "otherEntityName": "lre",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipType": "one-to-many",
+      "relationshipName": "subscriber",
+      "otherEntityName": "subscriber",
+      "otherEntityRelationshipName": "classOfService"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "description",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": 256
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "created",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "changelogDate": "20160716173258",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "class_of_service"
+}

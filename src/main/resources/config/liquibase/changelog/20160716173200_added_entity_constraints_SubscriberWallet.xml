@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity SubscriberWallet.
+    -->
+    <changeSet id="20160716173200-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="subscriber_id"
+                                 baseTableName="subscriber_wallet"
+                                 baseTableSchemaName="${CRM_SCHEMA}"
+                                 constraintName="fk_subscriberwallet_subscriber_id"
+                                 referencedColumnNames="id"
+                                 referencedTableSchemaName="${CRM_SCHEMA}"
+                                 referencedTableName="subscriber"/>
+
+    </changeSet>
+</databaseChangeLog>

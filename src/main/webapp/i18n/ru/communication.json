@@ -1,0 +1,28 @@
+{
+    "mccrmApp": {
+        "communication" : {
+            "home": {
+                "title": "Communications",
+                "createLabel": "Создать новый Communication",
+                "createOrEditLabel": "Создать или отредактировать Communication",
+                "search": "Найти Communication"
+            },
+            "created": "Новый Communication создан с идентификатором {{ param }}",
+            "updated": "Communication обновлен с идентификатором {{ param }}",
+            "deleted": "Communication удален с идентификатором {{ param }}",
+            "delete": {
+                "question": "Вы уверены что хотите удалить Communication {{ id }}?"
+            },
+            "detail": {
+                "title": "Communication"
+            },
+            "title": "Title",
+            "contactNumber": "Contact Number",
+            "contactPerson": "Contact Person",
+            "contactDescripton": "Contact Descripton",
+            "created": "Created",
+            "customer": "Customer",
+            "remark": "Remark"
+        }
+    }
+}

@@ -1,0 +1,62 @@
+entity ClassOfService {
+    description String maxlength(256),
+    created ZonedDateTime
+}
+
+entity Subscriber {
+    subscriberType String,
+    subscriberPaymentClass Integer,
+    creationDate ZonedDateTime
+}
+
+entity SubscriberWallet {
+    activationDate ZonedDateTime,
+    expired Boolean,
+    created ZonedDateTime
+}
+
+entity SubscriberWalletProperty {
+    balance Double,
+    created ZonedDateTime
+}
+
+entity Communication {
+    title String,
+    contactNumber String,
+    contactPerson String,
+    contactDescripton String,
+    created ZonedDateTime
+}
+
+entity Remark {
+    remark String maxlength(2048)
+    type String
+}
+
+relationship OneToMany {
+    Customer to Communication
+}
+
+relationship OneToMany {
+    Communication to Remark
+}
+
+relationship OneToMany {
+    Lre to ClassOfService
+}
+
+relationship OneToMany {
+    ClassOfService to Subscriber
+}
+
+relationship OneToMany {
+    Customer to Subscriber
+}
+
+relationship OneToMany {
+    Subscriber to SubscriberWallet
+}
+
+relationship OneToMany {
+    SubscriberWallet to SubscriberWalletProperty
+}

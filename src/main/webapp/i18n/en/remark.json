@@ -1,0 +1,24 @@
+{
+    "mccrmApp": {
+        "remark" : {
+            "home": {
+                "title": "Remarks",
+                "createLabel": "Create a new Remark",
+                "createOrEditLabel": "Create or edit a Remark",
+                "search": "Search for Remark"
+            },
+            "created": "A new Remark is created with identifier {{ param }}",
+            "updated": "A Remark is updated with identifier {{ param }}",
+            "deleted": "A Remark is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Remark {{ id }}?"
+            },
+            "detail": {
+                "title": "Remark"
+            },
+            "remark": "Remark",
+            "type": "Type",
+            "communication": "Communication"
+        }
+    }
+}

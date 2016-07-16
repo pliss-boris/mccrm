@@ -1,0 +1,27 @@
+{
+    "mccrmApp": {
+        "subscriber" : {
+            "home": {
+                "title": "Subscribers",
+                "createLabel": "Создать новый Subscriber",
+                "createOrEditLabel": "Создать или отредактировать Subscriber",
+                "search": "Найти Subscriber"
+            },
+            "created": "Новый Subscriber создан с идентификатором {{ param }}",
+            "updated": "Subscriber обновлен с идентификатором {{ param }}",
+            "deleted": "Subscriber удален с идентификатором {{ param }}",
+            "delete": {
+                "question": "Вы уверены что хотите удалить Subscriber {{ id }}?"
+            },
+            "detail": {
+                "title": "Subscriber"
+            },
+            "subscriberType": "Subscriber Type",
+            "subscriberPaymentClass": "Subscriber Payment Class",
+            "creationDate": "Creation Date",
+            "customer": "Customer",
+            "classOfService": "Class Of Service",
+            "subscriberWallet": "Subscriber Wallet"
+        }
+    }
+}

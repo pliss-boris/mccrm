@@ -24,7 +24,8 @@
             "lre": "Lre",
             "customerAddres": "Customer Addres",
             "customerContact": "Customer Contact",
-            "customer": "Customer",
+            "communication": "Communication",
+            "subscriber": "Subscriber",
             "parentCustomer": "Parent Customer"
         }
     }

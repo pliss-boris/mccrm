@@ -17,7 +17,8 @@
                 "title": "Lre"
             },
             "description": "Description",
-            "customer": "Customer"
+            "customer": "Customer",
+            "classOfService": "Class Of Service"
         }
     }
 }

@@ -1,0 +1,64 @@
+<div>
+    <h2 translate="mccrmApp.subscriberWallet.home.title">Subscriber Wallets</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="subscriber-wallet.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  translate="mccrmApp.subscriberWallet.home.createLabel">
+                        Create new Subscriber Wallet
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="mccrmApp.subscriberWallet.activationDate">Activation Date</span></th>
+                    <th><span translate="mccrmApp.subscriberWallet.expired">Expired</span></th>
+                    <th><span translate="mccrmApp.subscriberWallet.created">Created</span></th>
+                    <th><span translate="mccrmApp.subscriberWallet.subscriber">Subscriber</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="subscriberWallet in vm.subscriberWallets track by subscriberWallet.id">
+                    <td><a ui-sref="subscriber-wallet-detail({id:subscriberWallet.id})">{{subscriberWallet.id}}</a></td>
+                    <td>{{subscriberWallet.activationDate | date:'medium'}}</td>
+                    <td>{{subscriberWallet.expired}}</td>
+                    <td>{{subscriberWallet.created | date:'medium'}}</td>
+                    <td>
+                        <a ui-sref="subscriber-detail({id:subscriberWallet.subscriber.id})">{{subscriberWallet.subscriber.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="subscriber-wallet-detail({id:subscriberWallet.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="subscriber-wallet.edit({id:subscriberWallet.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="subscriber-wallet.delete({id:subscriberWallet.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -2,8 +2,8 @@
     "mccrmApp": {
         "CustomerType" : {
             "null": "",
-            "REGULAR": "Обычный",
-            "CORPORATE": "Сорпоративный"
+            "REGULAR": "REGULAR",
+            "CORPORATE": "CORPORATE"
         }
     }
 }

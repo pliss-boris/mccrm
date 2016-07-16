@@ -122,7 +122,7 @@ dependencies {
     compile ("com.ryantenney.metrics:metrics-spring:${metrics_spring_version}") {
         exclude(module: 'metrics-core')
         exclude(module: 'metrics-healthchecks')
-    } 
+    }
     compile("com.zaxxer:HikariCP:${HikariCP_version}") {
         exclude(module: 'tools')
     }
@@ -132,7 +132,7 @@ dependencies {
     compile "javax.transaction:javax.transaction-api"
     compile "org.apache.geronimo.javamail:geronimo-javamail_1.4_mail:${geronimo_javamail_1_4_mail_version}"
     compile "org.hibernate:hibernate-core:${hibernate_entitymanager_version}"
-    
+
     compile "org.hibernate:hibernate-envers"
     compile "org.hibernate:hibernate-validator"
     compile ("org.liquibase:liquibase-core:${liquibase_core_version}") {
@@ -161,7 +161,7 @@ dependencies {
     compile("io.springfox:springfox-swagger2:${springfox_version}"){
         exclude module: 'mapstruct'
     }
-    
+
     compile "org.postgresql:postgresql"
     compile "fr.ippon.spark.metrics:metrics-spark-reporter:${metrics_spark_reporter_version}"
     compile "org.mapstruct:mapstruct-jdk8:${mapstruct_version}"
@@ -173,9 +173,9 @@ dependencies {
     testCompile "org.mockito:mockito-core"
     testCompile "com.mattbertolini:liquibase-slf4j:${liquibase_slf4j_version}"
     testCompile "org.hamcrest:hamcrest-library"
-    
+
     testCompile "io.gatling.highcharts:gatling-charts-highcharts:${gatling_version}"
-    
+
     testCompile "com.h2database:h2"
     optional "org.springframework.boot:spring-boot-configuration-processor:${spring_boot_version}"
     //jhipster-needle-gradle-dependency - JHipster will add additional dependencies here
@@ -195,6 +195,23 @@ task wrapper(type: Wrapper) {
 
 task stage(dependsOn: 'bootRepackage') {
 }
+
+//task liquibaseDiffChangelog(type: JavaExec) {
+//    group = "liquibase"
+//
+//
+//    classpath sourceSets.main.runtimeClasspath
+//    classpath configurations.liquibase
+//    main = "liquibase.integration.commandline.Main"
+//
+//    args "--changeLogFile=" + liquibaseProps.getProperty('liquibase.changelog.path')+ buildTimestamp() +"_changelog.xml"
+//    args "--referenceUrl=hibernate:spring:" + liquibaseProps.getProperty('liquibase.domain.package') + "?dialect=" + applicationProps.getProperty('spring.jpa.properties.hibernate.dialect')
+//    args "--username=" + applicationProps.getProperty('spring.datasource.username')
+//    args "--password=" + applicationProps.getProperty('spring.datasource.password')
+//    args "--url=" + applicationProps.getProperty('spring.datasource.url')
+//    args "--driver=com.mysql.jdbc.Driver"
+//    args "diffChangeLog"
+//}
 
 compileJava.dependsOn processResources
 processResources.dependsOn cleanResources

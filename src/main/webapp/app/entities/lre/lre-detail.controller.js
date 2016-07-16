@@ -5,9 +5,9 @@
         .module('mccrmApp')
         .controller('LreDetailController', LreDetailController);
 
-    LreDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'entity', 'Lre', 'Customer'];
+    LreDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'entity', 'Lre', 'Customer', 'ClassOfService'];
 
-    function LreDetailController($scope, $rootScope, $stateParams, entity, Lre, Customer) {
+    function LreDetailController($scope, $rootScope, $stateParams, entity, Lre, Customer, ClassOfService) {
         var vm = this;
 
         vm.lre = entity;

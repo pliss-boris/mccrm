@@ -24,12 +24,19 @@
     {
       "relationshipId": 4,
       "relationshipType": "one-to-many",
-      "relationshipName": "customer",
-      "otherEntityName": "customer",
-      "otherEntityRelationshipName": "parentCustomer"
+      "relationshipName": "communication",
+      "otherEntityName": "communication",
+      "otherEntityRelationshipName": "customer"
     },
     {
       "relationshipId": 5,
+      "relationshipType": "one-to-many",
+      "relationshipName": "subscriber",
+      "otherEntityName": "subscriber",
+      "otherEntityRelationshipName": "customer"
+    },
+    {
+      "relationshipId": 6,
       "relationshipType": "many-to-one",
       "relationshipName": "parentCustomer",
       "otherEntityName": "customer",

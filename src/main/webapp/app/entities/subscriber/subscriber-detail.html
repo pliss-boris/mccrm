@@ -1,0 +1,34 @@
+
+<div>
+    <h2><span translate="mccrmApp.subscriber.detail.title">Subscriber</span> {{vm.subscriber.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="mccrmApp.subscriber.subscriberType">Subscriber Type</span></dt>
+        <dd>
+            <span>{{vm.subscriber.subscriberType}}</span>
+        </dd>
+        <dt><span translate="mccrmApp.subscriber.subscriberPaymentClass">Subscriber Payment Class</span></dt>
+        <dd>
+            <span>{{vm.subscriber.subscriberPaymentClass}}</span>
+        </dd>
+        <dt><span translate="mccrmApp.subscriber.creationDate">Creation Date</span></dt>
+        <dd>
+            <span>{{vm.subscriber.creationDate | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="mccrmApp.subscriber.customer">Customer</span></dt>
+        <dd>
+            <a ui-sref="customer-detail({id:vm.subscriber.customer.id})">{{vm.subscriber.customer.id}}</a>
+        </dd>
+        <dt><span translate="mccrmApp.subscriber.classOfService">Class Of Service</span></dt>
+        <dd>
+            <a ui-sref="class-of-service-detail({id:vm.subscriber.classOfService.id})">{{vm.subscriber.classOfService.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

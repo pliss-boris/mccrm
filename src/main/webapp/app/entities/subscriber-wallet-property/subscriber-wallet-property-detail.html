@@ -1,0 +1,26 @@
+
+<div>
+    <h2><span translate="mccrmApp.subscriberWalletProperty.detail.title">Subscriber Wallet Property</span> {{vm.subscriberWalletProperty.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="mccrmApp.subscriberWalletProperty.balance">Balance</span></dt>
+        <dd>
+            <span>{{vm.subscriberWalletProperty.balance}}</span>
+        </dd>
+        <dt><span translate="mccrmApp.subscriberWalletProperty.created">Created</span></dt>
+        <dd>
+            <span>{{vm.subscriberWalletProperty.created | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="mccrmApp.subscriberWalletProperty.subscriberWallet">Subscriber Wallet</span></dt>
+        <dd>
+            <a ui-sref="subscriber-wallet-detail({id:vm.subscriberWalletProperty.subscriberWallet.id})">{{vm.subscriberWalletProperty.subscriberWallet.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

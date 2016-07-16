@@ -11,6 +11,12 @@
                 "customer": "Customer",
                 "customerAddres": "Customer Addres",
                 "customerContact": "Customer Contact",
+                "classOfService": "Class Of Service",
+                "subscriber": "Subscriber",
+                "subscriberWallet": "Subscriber Wallet",
+                "subscriberWalletProperty": "Subscriber Wallet Property",
+                "communication": "Communication",
+                "remark": "Remark",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

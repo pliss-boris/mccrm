@@ -5,4 +5,5 @@ package com.bd.mc.crm.domain.config;
  */
 public class SchemasConfig {
     public static final String CRM = "crm";
+    public static final String BILLING = "billing";
 }

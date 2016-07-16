@@ -5,9 +5,9 @@
         .module('mccrmApp')
         .controller('CustomerDialogController', CustomerDialogController);
 
-    CustomerDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Customer', 'Lre', 'CustomerAddres', 'CustomerContact'];
+    CustomerDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Customer', 'Lre', 'CustomerAddres', 'CustomerContact', 'Communication', 'Subscriber'];
 
-    function CustomerDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Customer, Lre, CustomerAddres, CustomerContact) {
+    function CustomerDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Customer, Lre, CustomerAddres, CustomerContact, Communication, Subscriber) {
         var vm = this;
 
         vm.customer = entity;
@@ -18,8 +18,9 @@
         vm.lres = Lre.query();
         vm.customeraddres = CustomerAddres.query();
         vm.customercontacts = CustomerContact.query();
-        // vm.customers = Customer.query();
-        vm.customers = Customer.queryWithoutCurrent({id: vm.customer.id});
+        vm.communications = Communication.query();
+        vm.subscribers = Subscriber.query();
+        vm.customers = Customer.query();
 
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();

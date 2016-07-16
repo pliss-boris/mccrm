@@ -1,0 +1,47 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "customer",
+      "otherEntityName": "customer",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "classOfService",
+      "otherEntityName": "classOfService",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 3,
+      "relationshipType": "one-to-many",
+      "relationshipName": "subscriberWallet",
+      "otherEntityName": "subscriberWallet",
+      "otherEntityRelationshipName": "subscriber"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "subscriberType",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "subscriberPaymentClass",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "creationDate",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "changelogDate": "20160716173259",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "subscriber"
+}

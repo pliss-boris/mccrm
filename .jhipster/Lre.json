@@ -6,6 +6,13 @@
       "relationshipName": "customer",
       "otherEntityName": "customer",
       "otherEntityRelationshipName": "lre"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipType": "one-to-many",
+      "relationshipName": "classOfService",
+      "otherEntityName": "classOfService",
+      "otherEntityRelationshipName": "lre"
     }
   ],
   "fields": [

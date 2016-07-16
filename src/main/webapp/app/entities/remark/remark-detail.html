@@ -1,0 +1,26 @@
+
+<div>
+    <h2><span translate="mccrmApp.remark.detail.title">Remark</span> {{vm.remark.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="mccrmApp.remark.remark">Remark</span></dt>
+        <dd>
+            <span>{{vm.remark.remark}}</span>
+        </dd>
+        <dt><span translate="mccrmApp.remark.type">Type</span></dt>
+        <dd>
+            <span>{{vm.remark.type}}</span>
+        </dd>
+        <dt><span translate="mccrmApp.remark.communication">Communication</span></dt>
+        <dd>
+            <a ui-sref="communication-detail({id:vm.remark.communication.id})">{{vm.remark.communication.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>
