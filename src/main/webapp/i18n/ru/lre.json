@@ -1,0 +1,23 @@
+{
+    "mccrmApp": {
+        "lre" : {
+            "home": {
+                "title": "Lres",
+                "createLabel": "Создать новый Lre",
+                "createOrEditLabel": "Создать или отредактировать Lre",
+                "search": "Найти Lre"
+            },
+            "created": "Новый Lre создан с идентификатором {{ param }}",
+            "updated": "Lre обновлен с идентификатором {{ param }}",
+            "deleted": "Lre удален с идентификатором {{ param }}",
+            "delete": {
+                "question": "Вы уверены что хотите удалить Lre {{ id }}?"
+            },
+            "detail": {
+                "title": "Lre"
+            },
+            "description": "Description",
+            "customer": "Customer"
+        }
+    }
+}

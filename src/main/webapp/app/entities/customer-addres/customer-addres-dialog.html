@@ -1,0 +1,127 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myCustomerAddresLabel" translate="mccrmApp.customerAddres.home.createOrEditLabel">Create or edit a Customer Addres</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.customerAddres.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.customerAddres.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mccrmApp.customerAddres.adressType" for="field_adressType">Adress Type</label>
+            <select class="form-control" name="adressType" ng-model="vm.customerAddres.adressType" id="field_adressType" required>
+                <option value="REGULAR" translate="mccrmApp.AdressType.REGULAR">REGULAR</option>
+                <option value="INVOICE" translate="mccrmApp.AdressType.INVOICE">INVOICE</option>
+            </select>
+            <div ng-show="editForm.adressType.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.adressType.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mccrmApp.customerAddres.country" for="field_country">Country</label>
+            <input type="text" class="form-control" name="country" id="field_country"
+                    ng-model="vm.customerAddres.country"
+                    required ng-maxlength="64" />
+            <div ng-show="editForm.country.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.country.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.country.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="64">
+                    This field cannot be longer than 64 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mccrmApp.customerAddres.city" for="field_city">City</label>
+            <input type="text" class="form-control" name="city" id="field_city"
+                    ng-model="vm.customerAddres.city"
+                    ng-maxlength="64" />
+            <div ng-show="editForm.city.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.city.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="64">
+                    This field cannot be longer than 64 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mccrmApp.customerAddres.home" for="field_home">Home</label>
+            <input type="text" class="form-control" name="home" id="field_home"
+                    ng-model="vm.customerAddres.home"
+                    ng-maxlength="64" />
+            <div ng-show="editForm.home.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.home.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="64">
+                    This field cannot be longer than 64 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mccrmApp.customerAddres.homeLetter" for="field_homeLetter">Home Letter</label>
+            <input type="text" class="form-control" name="homeLetter" id="field_homeLetter"
+                    ng-model="vm.customerAddres.homeLetter"
+                    ng-maxlength="16" />
+            <div ng-show="editForm.homeLetter.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.homeLetter.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="16">
+                    This field cannot be longer than 16 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mccrmApp.customerAddres.flat" for="field_flat">Flat</label>
+            <input type="text" class="form-control" name="flat" id="field_flat"
+                    ng-model="vm.customerAddres.flat"
+                    ng-maxlength="64" />
+            <div ng-show="editForm.flat.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.flat.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="64">
+                    This field cannot be longer than 64 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mccrmApp.customerAddres.zip" for="field_zip">Zip</label>
+            <input type="text" class="form-control" name="zip" id="field_zip"
+                    ng-model="vm.customerAddres.zip"
+                    ng-maxlength="64" />
+            <div ng-show="editForm.zip.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.zip.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="64">
+                    This field cannot be longer than 64 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mccrmApp.customerAddres.isActive" for="field_isActive">Is Active</label>
+            <input type="checkbox" class="form-control" name="isActive" id="field_isActive"
+                    ng-model="vm.customerAddres.isActive"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="mccrmApp.customerAddres.customer" for="field_customer">Customer</label>
+            <select class="form-control" id="field_customer" name="customer" ng-model="vm.customerAddres.customer" ng-options="customer as customer.id for customer in vm.customers track by customer.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

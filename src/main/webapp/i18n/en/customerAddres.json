@@ -1,0 +1,30 @@
+{
+    "mccrmApp": {
+        "customerAddres" : {
+            "home": {
+                "title": "Customer Addres",
+                "createLabel": "Create a new Customer Addres",
+                "createOrEditLabel": "Create or edit a Customer Addres",
+                "search": "Search for Customer Addres"
+            },
+            "created": "A new Customer Addres is created with identifier {{ param }}",
+            "updated": "A Customer Addres is updated with identifier {{ param }}",
+            "deleted": "A Customer Addres is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Customer Addres {{ id }}?"
+            },
+            "detail": {
+                "title": "Customer Addres"
+            },
+            "adressType": "Adress Type",
+            "country": "Country",
+            "city": "City",
+            "home": "Home",
+            "homeLetter": "Home Letter",
+            "flat": "Flat",
+            "zip": "Zip",
+            "isActive": "Is Active",
+            "customer": "Customer"
+        }
+    }
+}

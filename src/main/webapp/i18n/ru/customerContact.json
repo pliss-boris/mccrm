@@ -1,0 +1,30 @@
+{
+    "mccrmApp": {
+        "customerContact" : {
+            "home": {
+                "title": "Customer Contacts",
+                "createLabel": "Создать новый Customer Contact",
+                "createOrEditLabel": "Создать или отредактировать Customer Contact",
+                "search": "Найти Customer Contact"
+            },
+            "created": "Новый Customer Contact создан с идентификатором {{ param }}",
+            "updated": "Customer Contact обновлен с идентификатором {{ param }}",
+            "deleted": "Customer Contact удален с идентификатором {{ param }}",
+            "delete": {
+                "question": "Вы уверены что хотите удалить Customer Contact {{ id }}?"
+            },
+            "detail": {
+                "title": "Customer Contact"
+            },
+            "greeting": "Greeting",
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "mobile": "Mobile",
+            "fax": "Fax",
+            "email": "Email",
+            "memo": "Memo",
+            "contactType": "Contact Type",
+            "customer": "Customer"
+        }
+    }
+}

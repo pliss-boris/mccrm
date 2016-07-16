@@ -1,0 +1,50 @@
+
+<div>
+    <h2><span translate="mccrmApp.customerContact.detail.title">Customer Contact</span> {{vm.customerContact.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="mccrmApp.customerContact.greeting">Greeting</span></dt>
+        <dd>
+            <span>{{vm.customerContact.greeting}}</span>
+        </dd>
+        <dt><span translate="mccrmApp.customerContact.firstName">First Name</span></dt>
+        <dd>
+            <span>{{vm.customerContact.firstName}}</span>
+        </dd>
+        <dt><span translate="mccrmApp.customerContact.lastName">Last Name</span></dt>
+        <dd>
+            <span>{{vm.customerContact.lastName}}</span>
+        </dd>
+        <dt><span translate="mccrmApp.customerContact.mobile">Mobile</span></dt>
+        <dd>
+            <span>{{vm.customerContact.mobile}}</span>
+        </dd>
+        <dt><span translate="mccrmApp.customerContact.fax">Fax</span></dt>
+        <dd>
+            <span>{{vm.customerContact.fax}}</span>
+        </dd>
+        <dt><span translate="mccrmApp.customerContact.email">Email</span></dt>
+        <dd>
+            <span>{{vm.customerContact.email}}</span>
+        </dd>
+        <dt><span translate="mccrmApp.customerContact.memo">Memo</span></dt>
+        <dd>
+            <span>{{vm.customerContact.memo}}</span>
+        </dd>
+        <dt><span translate="mccrmApp.customerContact.contactType">Contact Type</span></dt>
+        <dd>
+            <span translate="{{'mccrmApp.ContactType.' + vm.customerContact.contactType}}">{{vm.customerContact.contactType}}</span>
+        </dd>
+        <dt><span translate="mccrmApp.customerContact.customer">Customer</span></dt>
+        <dd>
+            <a ui-sref="customer-detail({id:vm.customerContact.customer.id})">{{vm.customerContact.customer.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

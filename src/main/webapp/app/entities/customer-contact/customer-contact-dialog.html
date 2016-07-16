@@ -1,0 +1,81 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myCustomerContactLabel" translate="mccrmApp.customerContact.home.createOrEditLabel">Create or edit a Customer Contact</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.customerContact.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.customerContact.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mccrmApp.customerContact.greeting" for="field_greeting">Greeting</label>
+            <input type="text" class="form-control" name="greeting" id="field_greeting"
+                    ng-model="vm.customerContact.greeting"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mccrmApp.customerContact.firstName" for="field_firstName">First Name</label>
+            <input type="text" class="form-control" name="firstName" id="field_firstName"
+                    ng-model="vm.customerContact.firstName"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mccrmApp.customerContact.lastName" for="field_lastName">Last Name</label>
+            <input type="text" class="form-control" name="lastName" id="field_lastName"
+                    ng-model="vm.customerContact.lastName"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mccrmApp.customerContact.mobile" for="field_mobile">Mobile</label>
+            <input type="text" class="form-control" name="mobile" id="field_mobile"
+                    ng-model="vm.customerContact.mobile"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mccrmApp.customerContact.fax" for="field_fax">Fax</label>
+            <input type="text" class="form-control" name="fax" id="field_fax"
+                    ng-model="vm.customerContact.fax"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mccrmApp.customerContact.email" for="field_email">Email</label>
+            <input type="text" class="form-control" name="email" id="field_email"
+                    ng-model="vm.customerContact.email"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mccrmApp.customerContact.memo" for="field_memo">Memo</label>
+            <input type="text" class="form-control" name="memo" id="field_memo"
+                    ng-model="vm.customerContact.memo"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mccrmApp.customerContact.contactType" for="field_contactType">Contact Type</label>
+            <select class="form-control" name="contactType" ng-model="vm.customerContact.contactType" id="field_contactType">
+                <option value="REGULAR" translate="mccrmApp.ContactType.REGULAR">REGULAR</option>
+                <option value="CONTACT" translate="mccrmApp.ContactType.CONTACT">CONTACT</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label translate="mccrmApp.customerContact.customer" for="field_customer">Customer</label>
+            <select class="form-control" id="field_customer" name="customer" ng-model="vm.customerContact.customer" ng-options="customer as customer.id for customer in vm.customers track by customer.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

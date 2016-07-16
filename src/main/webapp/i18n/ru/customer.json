@@ -1,0 +1,31 @@
+{
+    "mccrmApp": {
+        "customer" : {
+            "home": {
+                "title": "Customers",
+                "createLabel": "Создать новый Customer",
+                "createOrEditLabel": "Создать или отредактировать Customer",
+                "search": "Найти Customer"
+            },
+            "created": "Новый Customer создан с идентификатором {{ param }}",
+            "updated": "Customer обновлен с идентификатором {{ param }}",
+            "deleted": "Customer удален с идентификатором {{ param }}",
+            "delete": {
+                "question": "Вы уверены что хотите удалить Customer {{ id }}?"
+            },
+            "detail": {
+                "title": "Customer"
+            },
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "middleName": "Middle Name",
+            "customerType": "Customer Type",
+            "creationDate": "Creation Date",
+            "lre": "Lre",
+            "customerAddres": "Customer Addres",
+            "customerContact": "Customer Contact",
+            "customer": "Customer",
+            "parentCustomer": "Parent Customer"
+        }
+    }
+}

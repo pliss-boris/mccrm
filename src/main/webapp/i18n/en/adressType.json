@@ -1,0 +1,9 @@
+{
+    "mccrmApp": {
+        "AdressType" : {
+            "null": "",
+            "REGULAR": "REGULAR",
+            "INVOICE": "INVOICE"
+        }
+    }
+}

@@ -1,0 +1,42 @@
+
+<div>
+    <h2><span translate="mccrmApp.customer.detail.title">Customer</span> {{vm.customer.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="mccrmApp.customer.firstName">First Name</span></dt>
+        <dd>
+            <span>{{vm.customer.firstName}}</span>
+        </dd>
+        <dt><span translate="mccrmApp.customer.lastName">Last Name</span></dt>
+        <dd>
+            <span>{{vm.customer.lastName}}</span>
+        </dd>
+        <dt><span translate="mccrmApp.customer.middleName">Middle Name</span></dt>
+        <dd>
+            <span>{{vm.customer.middleName}}</span>
+        </dd>
+        <dt><span translate="mccrmApp.customer.customerType">Customer Type</span></dt>
+        <dd>
+            <span translate="{{'mccrmApp.CustomerType.' + vm.customer.customerType}}">{{vm.customer.customerType}}</span>
+        </dd>
+        <dt><span translate="mccrmApp.customer.creationDate">Creation Date</span></dt>
+        <dd>
+            <span>{{vm.customer.creationDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span translate="mccrmApp.customer.lre">Lre</span></dt>
+        <dd>
+            <a ui-sref="lre-detail({id:vm.customer.lre.id})">{{vm.customer.lre.id}}</a>
+        </dd>
+        <dt><span translate="mccrmApp.customer.parentCustomer">Parent Customer</span></dt>
+        <dd>
+            <a ui-sref="customer-detail({id:vm.customer.parentCustomer.id})">{{vm.customer.parentCustomer.parentCustomerId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

@@ -1,0 +1,9 @@
+{
+    "mccrmApp": {
+        "CustomerType" : {
+            "null": "",
+            "REGULAR": "REGULAR",
+            "CORPORATE": "CORPORATE"
+        }
+    }
+}

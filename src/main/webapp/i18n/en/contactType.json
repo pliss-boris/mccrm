@@ -1,0 +1,9 @@
+{
+    "mccrmApp": {
+        "ContactType" : {
+            "null": "",
+            "REGULAR": "REGULAR",
+            "CONTACT": "CONTACT"
+        }
+    }
+}

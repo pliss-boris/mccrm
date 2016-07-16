@@ -55,3 +55,8 @@ relationship OneToMany {
 relationship OneToMany {
 	Customer to CustomerContact
 }
+
+
+relationship OneToMany {
+	Customer to Customer{parentCustomer(parentCustomerId)}
+}
